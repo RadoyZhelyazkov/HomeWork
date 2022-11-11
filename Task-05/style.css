@@ -1,0 +1,21 @@
+button a {
+    text-decoration: none;
+}
+
+button a:link, a:visited, a:hover{
+    color:black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+#ticked {
+    margin-top: 50%;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
