@@ -41,6 +41,11 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: #f1f1f1;
+    color:#000000;
+}
+
 h1, h2 {
     text-align: center;
     padding: 0px 0px 20px;
