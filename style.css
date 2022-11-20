@@ -2,11 +2,20 @@ body {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
+button {
+    background-color: #000000;
+    color: #ffffff;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
-a:link, a:visited, 
-a:hover, a:focus {
-    color: #000000;
+button:hover {
+    background-color: #ffffff;
+    color: #000000;  
+}
+
+.final {
+    width: 200px;
 }

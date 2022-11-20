@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    font-weight: 100;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 59px;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0px 0px 30px;
+}
+
+footer {
+    background-color: #000000;
+    color:#f1f1f1;
+    text-align: center;
+    padding: 20px 0px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+nav {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+button {
+    background-color: #000000;
+    color:#f1f1f1;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 0px 0px 20px;
+}
+
+h3 {
+    padding: 20px 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody tr td{
+    border: 1px solid #000000;   
+    text-align: center;
+}
+
+tbody a:link, 
+tbody a:visited, 
+tbody a:hover, 
+tbody a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.name {
+    width: 8%;
+}
+
+.region {
+    width: 55%;
+}
+
+.diet {
+    width: 25%;
+}
+
+.size {
+    width: 12%;
+}
+
+.fish-info {
+    margin-top:20%;
+}
+
+.fish {
+    margin-bottom:20%;
+}
+
+img {
+    width: 33%;
+    height:400px;
+}
+
+video {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
