@@ -1,0 +1,105 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+}
+
+@font-face {
+    font-family: Lexus;
+    src: url("Resources/Fonts/MrDafoe-Regular.ttf");
+}
+
+html, body { 
+    width: 100%; 
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: rgb(240, 240, 240);
+}
+
+header {
+    text-align: center;
+}
+
+h1, h2, footer {
+    font-family: Lexus, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    display: inline-block; 
+    border: 3px dotted black;
+    margin-top: 5px;
+    padding: 10px 50px;
+    background-color: rgb(200, 200, 200);
+} 
+
+section.company {
+    text-indent: 50px;
+    text-align: right;
+    padding-left: 25%;
+    padding-right: 5px; 
+    margin: 30px 0
+}
+
+section.company h2 {
+    margin-bottom: 30px;
+}
+
+.vehicles {
+    width: 80%;
+    float:left;
+    margin-left:10%;  
+}
+
+section.vehicle { 
+    float:left;
+    width: 47%;
+    height: 350px;
+    text-align: center;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin-bottom: 30px;
+}
+
+section.vehicle:nth-child(odd) {
+    margin-left: 2%;
+    border-right: 3px solid black;
+}
+
+section.vehicle:nth-child(even) {
+    margin-left: 2%;
+    border-left: 3px solid black;
+}
+
+section.vehicle h2 {
+    padding: 5% 0 0 5%;
+}
+
+section.vehicle p {
+    text-align: justify;
+    padding: 5%;
+}
+
+section.vehicle img {
+    float:right;
+    width: 40%;
+    padding: 5%;
+}
+
+.red {
+    color:red;
+    font-weight: 900;
+}
+
+footer {
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    display: inline-block; 
+    border: 3px dotted black;
+    margin-top: 5px;
+    padding: 10px 50px;
+    background-color: rgb(200, 200, 200);
+    font-weight: bold;
+}
