@@ -93,6 +93,7 @@ section.vehicle img {
 footer {
     text-align: center;
     clear: both;
+    margin-bottom: 5px;
 }
 
 footer p {
