@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    margin: 0 auto;
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 2em;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.lectures {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    margin: 20px 20px;
+}
+
+.lectures img {
+    background-color: #2e465b;
+    width: 100%;
+    height: auto;
+}
+
+.lectures p {
+    text-align: justify;
+}
+
+.lectures-pictures {
+    position: relative;
+}
+
+span {
+    user-select: none;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(46, 70, 91, 0.8);
+    padding: 5px; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff 50%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+}
+
+span:hover {
+    cursor: pointer;
+    color: rgba(46, 70, 91, 1);
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+span:active ~img {
+    translate: -10%;
+    width: 120%;
+    height: 140%;
+}
