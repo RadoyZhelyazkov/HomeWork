@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+    font-family: sans-serif;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    background-color: #888888;
+    border-radius: 10px;
+    padding: 0;    
+    margin: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    line-height: 3em;
+    width: 20%;
+    height: 50px;
+    float: left;  
+}
+
+nav ul li a {
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-decoration: none;
+}
+
+nav ul li  a:active, nav ul li a:visited,
+nav ul li  a:hover, nav ul li a:focus {
+    border-radius: 10px;
+    background-color: #1abc9c;
+}
+
+.new-task {
+    color: #515060;
+    text-align: center;
+    position: relative;
+    width: 40%;
+    height: 220px;
+    background-color: #ffffff;
+    margin:  0 auto;
+    border-radius: 10px;
+}
+
+.new-task img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+} 
+
+
+.new-task h2 {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    translate: -50%;
+}
+
+.add-task input {
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    line-height: 3em;
+    padding-left: 10px;
+    width: 35%;
+}
+
+.add-task button {
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    left: 60%;
+    color: #ffffff;
+    background-color: #198754;
+    line-height: 3em;
+    width: 20%;
+    border-color: #198754;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.in-progress {
+    color:#a89ffb;
+    font-weight:bolder ;
+    position: absolute;
+    bottom: -8%;
+    left: 20%;
+    line-height: 3em;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    width: 25%;
+    background-color: #ffffff;
+}
+
+.completed {
+    color: #22b671;
+    font-weight: bolder;
+    position: absolute;  
+    bottom: -8%;
+    right: 20%;
+    line-height: 3em;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    width: 25%;
+    background-color: #ffffff;
+}
+
+.tasks {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.tasks dt {
+    position: relative;
+    top:5px;
+    padding: 2px;
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    margin-bottom: -50%;
+    margin-left: -10px;
+    background-color: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    color: #888888;
+    font-weight: bolder;
+    z-index: 999;
+}
+  
+.tasks dd {
+    position: relative;
+    padding-left: 50px;
+    margin-left: 0;
+    line-height: 3em;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #515060;
+    font-weight: bold;
+}
+
+.tasks dl dt.completed-date {
+    color: #22b671;
+}
+
+.tasks dl dd.completed-task {
+    background-color: #888888;
+    color: #ffffff;
+    text-decoration: line-through;
+}
+
+.tasks dl dd div.bin {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    background-image: url("resources/bin-dark.png"); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-width: 20px;
+    min-height: 24px;
+}
+
+.tasks dl dd.completed-task div.bin {
+    background-image: url("resources/bin-white.png"); 
+}
+
+
+.tasks dl dd.completed-task div.checked {
+    position: absolute;
+    left: 20px;
+    top: 25%;
+    background-image: url("resources/check.png"); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-width: 20px;
+    min-height: 24px;
+}
