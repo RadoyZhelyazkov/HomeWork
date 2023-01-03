@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+header h1 {
+    margin: 0 auto;
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 2em;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.lectures {
+    display: inline-block;
+    width: 20%;
+    margin: 20px 20px;
+}
+
+.lectures img {
+    background-color: #2e465b;
+    width: 100%;
+    height: auto;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 2px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom-left-radius: 5px;
+}
+
+.lectures p {
+    color:#ffffff;
+    text-align: justify;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 2px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom-left-radius: 5px;
+}
+
+.lectures-pictures {
+    position: relative;
+}
+
+span {
+    user-select: none;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(46, 70, 91, 0.8);
+    padding: 5px; 
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 999;
+}
+
+span:hover {
+    cursor: pointer;
+    color: rgba(46, 70, 91, 1);
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+span:hover ~img {
+    width: 120%;
+    height: auto;
+    position: absolute;
+    bottom:50%;
+    right: -10%;
+    z-index: 800;
+}
