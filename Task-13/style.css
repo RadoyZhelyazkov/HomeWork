@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(0, 188, 212, 1) 50%, rgba(238, 130, 238, 1) 100%);
+    min-height: 100vh;
+}
+
+main {
+    position: relative;
+}   
+
+div {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition-property: transform;
+    transition-duration: 10s;
+    transition-timing-function: ease-in-out;
+    z-index: 900;
+}
+
+#sq1 {
+    top: 100px;
+    left: 10%;
+    height: 80px;
+    width: 80px;
+    transition-delay: 1s;
+    rotate: 25deg;
+}
+
+#sq2 {
+    top: 250px;
+    left: 30%;
+    height: 160px;
+    width: 160px;
+    transition-delay: 0.2s;
+    rotate: -30deg;
+}
+
+#sq3 {
+    top: 100px;
+    left: 50%;
+    translate: -50%;
+    height: 50px;
+    width: 50px;
+    transition-delay: 0.5s;
+    rotate: 50deg;
+}
+
+#sq4 {
+    top: -20px;
+    right: 30%;
+    height: 120px;
+    width: 120px;
+    transition-delay: 0.8s;
+    rotate: 70deg;
+}
+
+#sq5 {
+    top: 300px;
+    right: 10%;
+    height: 200px;
+    width: 200px;
+    rotate: 30deg;
+}
+
+body:hover #sq1 {
+    transform: translateY(+50vh)rotate(-800deg)translateX(100%)scale(-2);
+}
+
+body:hover #sq2 {
+    transform: translateY(+50vh)rotate(-800deg)translateX(100%)scale(-1);
+}
+
+body:hover #sq3 {
+    transform: translateY(+50vh)rotate(-800deg)translateX(50%)scale(-2);
+}
+
+body:hover #sq4 {
+    transform: translateY(+50vh)rotate(-800deg)translateX(50%)scale(-4);
+}
+
+body:hover #sq5 {
+    transform: translateY(+40vh)rotate(-800deg)translateX(50%)scale(-1);
+}
+
+main{ 
+    height: 100vh;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    translate: -50%;
+    z-index: 800;
+}

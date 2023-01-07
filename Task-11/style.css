@@ -81,7 +81,7 @@ body {
 }
 
 #main div {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: 33%;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 #aside div {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: 100%;
 }
 
