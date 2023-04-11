@@ -298,7 +298,7 @@ function validatorDaysLeftPercentage (startDate, endDate) {
            daysTotal = 1;
         }
         
-        var daysLeftNumber = daysLeft(endDate);
+        var daysLeftNumber = validatorDaysLeft(endDate);
 
         daysLeftPercentage = (((daysLeftNumber/(daysTotal))) * 100).toFixed(2);
     }
