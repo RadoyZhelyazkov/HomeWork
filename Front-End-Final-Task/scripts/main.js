@@ -232,7 +232,7 @@ function validatorDaysLeft(endDate) {
     return daysLeft;
 }
 
-function validatorDaysLeftPercentage (startDate, endDate) {
+function validatorDaysLeftPercentage(startDate, endDate) {
     let daysLeftPercentage = '';
 
     if(startDate != '' && endDate != '') {
