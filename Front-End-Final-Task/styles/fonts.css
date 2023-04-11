@@ -1,0 +1,54 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+    color:#4B4F5C;
+}
+
+.txt-bld {
+    font-weight: 700;
+}
+
+.txt-l {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.txt-l-bld {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.txt-s {
+    font-size: 14;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.txt-s-bld {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 112%;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 112%;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 112%;
+}

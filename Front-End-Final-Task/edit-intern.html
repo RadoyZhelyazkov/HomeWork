@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Management Studio</title>
+    <link rel="icon" type="image/x-icon" href="resources/icons/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
+</head>    
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="resources/images/logo.png" alt="logo"></a>
+        <h1>IMS</h1>
+        <nav>
+            <a href="https://www.edynamix.com/bg" target="_blank"><img src="resources/images/edynamix.svg" alt="edynamix"></a>
+            <a href="https://www.itacademysz.com/" target="_blank"><img src="resources/images/it-academy.svg" alt="it-academy"></a>
+        </nav>
+    </header>
+    <main>
+        <section id="addIntern">
+            <h2>Edit Intern</h2>
+            <hr>
+            <form id="internForm" action="index.html" autocomplete="off">
+                <span id="deleteIntern" class="fx-row">
+                    <span class="buttons">
+                        <button type="button" id="buttonDeleteIntern" class="btn txt-bld btn-del">Delete</button> 
+                    </span>
+                </span>                    
+                </span>                
+                <span id="disclaimer" class="fx-row txt-bld dng">* Mandatory Fields</span>
+                <span class="image">
+                    <label for="image">Intern Picture:</label>
+                    <input type="file" id="image" name="image" accept="image/jpg">
+                </span>
+                <span id="names" class="fx-row">
+                    <span class="input">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John" pattern="^[A-Z][a-z]*(?: [A-Z][a-z]*)*$" maxlength="100" required>
+                    </span>
+                    <span class="input">
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe"  pattern="^[A-Z][a-z]*(?: [A-Z][a-z]*)*$" maxlength="100" maxlength="100" required>
+                    </span>
+                </span>
+                <span id="contacts" class="fx-row">
+                    <span class="input">
+                        <label for="phone">Telephone *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+359888584434" pattern="^\+?\d{6,}$" maxlength="15" required>
+                    </span>
+                    <span class="input">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="150" required>    
+                    </span>
+                </span>
+                <span id="dates" class="fx-row">
+                    <span class="input">
+                        <label for="startDate">Start Date *</label>
+                        <input type="date" id="startDate" name="startDate" placeholder="mm/dd/yyyy" min="1900-01-01" max="2100-12-31" required>    
+                    </span>
+                    <span class="input">
+                        <label for="endDate">End Date *</label>
+                        <input type="date" id="endDate" name="endDate" placeholder="mm/dd/yyyy" min="1900-01-01" max="2100-12-31" required>
+                    </span>
+                    <span class="input">
+                        <label for="daysLeft">Day(s) Left</label>
+                        <span class="txt-bld" type="text" id="daysLeft" name="daysLeft"></span>
+                    </span>
+                </span>
+                <span id="firstTasks" class="fx-row">
+                    <span class="input">
+                        <label for="firstTask">First Task *</label>
+                        <select id="firstTask" name="firstTask" required>
+                            <option value="" selected disabled hidden>-- Select Task --</option>
+                        </select>       
+                    </span>
+                    <span class="input">
+                        <label for="firstTaskResult">First Task Result</label>
+                        <select id="firstTaskResult" name="firstTaskResult" disabled>
+                            <option value="" selected>-- Select Result --</option>
+                        </select>       
+                    </span>
+                </span>
+                <span id="secondTasks" class="fx-row">
+                    <span class="input">
+                        <label for="secondTask">Second Task *</label>
+                        <select id="secondTask" name="secondTask" disabled required>
+                            <option value="" selected disabled hidden>-- Select Task --</option>
+                        </select>       
+                    </span>
+                    <span class="input">
+                        <label for="secondTaskResult">Second Task Result</label>
+                        <select id="secondTaskResult" name="secondTaskResult" disabled>
+                            <option value="" selected>-- Select Result --</option>
+                        </select>       
+                    </span>
+                </span> 
+                <span id="mentor" class="fx-row">
+                    <span class="input">
+                        <label for="mentorFirstName">Mentor First Name *</label>
+                        <input type="text" id="mentorFirstName" name="mentorFirstName" placeholder="John" pattern="^[A-Z][a-z]*(?: [A-Z][a-z]*)*$" maxlength="100" required>
+                    </span>
+                    <span class="input">
+                        <label for="mentorLastName">Mentor Last Name *</label>
+                        <input type="text" id="mentorLastName" name="mentorLastName" placeholder="Doe"  pattern="^[A-Z][a-z]*(?: [A-Z][a-z]*)*$" maxlength="100" maxlength="100" required>
+                    </span>
+                </span> 
+                <span id="status" class="fx-row">
+                    <span class="input">
+                        <label for="department">Department</label>
+                        <select id="department" name="department" disabled>
+                            <option value="" selected>-- select department --</option>
+                            <option value="Web">Web</option>
+                            <option value="Database">Database</option>
+                            <option value="Support">Support</option>
+                        </select>       
+                    </span>
+                    <span class="input">
+                        <label for="internStatus">Status</label>
+                        <span class="txt-l-bld" type="text" id="internStatus" name="internStatus"></span>
+                    </span>
+                </span>                                                
+                <span id="buttons" class="fx-row">
+                    <span class="buttons">
+                        <button type="button" class="btn txt-l-bld" id="buttonBack">Cancel</button>
+                        <button class="btn btn-cfm txt-l-bld" id="addInternForm" type="submit">Save</button>
+                    </span>
+                </span>
+            </form>
+        </section>
+    </main>
+    <dialog id="errorDialog">
+        <span class="dialogMessage">
+            <span id="errorMessage" class="txt-bld"></span>
+            <span class="buttons">
+                <button id="closeError" class="btn txt-bld">Close</button>
+            </span>
+        </span>
+    </dialog>
+    <dialog id="dialogDeleteInternData">
+        <span class="dialogMessage">
+            <p class="txt-bld">Are you sure you want to delete this intern?</p>
+            <span class="buttons">
+                <button id="cancelDeleteInternData" class="btn txt-bld">Cancel</button>
+                <button id="confirmDeleteInternData" class="btn txt-bld btn-cfm">Confirm</button>
+            </span>
+        </span>
+    </dialog>   
+    <footer>
+        <p class="text-s">Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script> Internship Management Studio by Radoy Zhelyazkov
+        </p>
+    </footer>
+    <script type="module" src="scripts/edit-intern.js"></script>
+</body>
+</html>

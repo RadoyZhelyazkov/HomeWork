@@ -1,0 +1,96 @@
+@import url('fonts.css');
+
+.btn {
+    cursor: pointer;
+    padding: 0 33px;
+    line-height: 46px;
+    border-radius: 28px;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    border-style: solid;
+    /* box-shadow: 0px 4px 15px -6px rgba(0, 0, 0, 0.5); */
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-color: #257d9e;
+    color: #257d9e;
+}
+
+/* 
+.btn-dng:hover {
+    background-color: #ff0000;
+    color: #212529;
+}
+
+.btn-add:hover {
+    background-color: #00ff00;
+    color: #212529;
+} */
+
+.btn-cfm {
+    background-color: #257d9e;
+    color: #ffffff;
+    border-color: #257d9e;
+}
+
+.btn-cfm:hover {
+    background-color: transparent;
+    color: #257d9e;
+    border-color: #257d9e;
+}
+
+.btn-del {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    border-style: solid;
+    color:#ffffff;
+}
+
+.btn-del:hover{
+    background-color: transparent;
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.btn-edt-crl {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #257d9e;
+    border-color: #257d9e;
+    border-style: solid;
+    color:#ffffff;
+}
+
+.btn-edt-crl:hover{
+    background-color: transparent;
+    color: #257d9e;
+    border-color: #257d9e;
+}
+
+.btn-del-crl {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ff0000;
+    border-color: #ff0000;
+    border-style: solid;
+    color:#ffffff;
+}
+
+.btn-del-crl:hover{
+    background-color: transparent;
+    color: #ff0000;
+    border-color: #ff0000;
+}

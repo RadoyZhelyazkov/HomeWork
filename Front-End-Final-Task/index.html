@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Management Studio</title>
+    <link rel="icon" type="image/x-icon" href="resources/icons/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="resources/images/logo.png" alt="logo"></a>
+        <h1>IMS</h1>
+        <nav>
+            <a href="https://www.edynamix.com/bg" target="_blank"><img src="resources/images/edynamix.svg" alt="edynamix"></a>
+            <a href="https://www.itacademysz.com/" target="_blank"><img src="resources/images/it-academy.svg" alt="it-academy"></a>
+        </nav>
+    </header>
+    <main>
+        <section id="manageButtons" class="buttons"></section>
+        <section id="internList" class="list table-wrap">
+            <h2>Interns List</h2>
+            <hr>
+        </section>
+    </main>
+    <dialog id="dialogDeleteInternsData">
+        <span class="dialogMessage">
+            <p class="txt-bld">Are you sure you want to delete all interns?</p>
+            <span class="buttons">
+                <button id="cancelDeleteInternsData" class="btn txt-bld">Cancel</button>
+                <button id="confirmDeleteInternsData" class="btn txt-bld btn-cfm">Confirm</button>
+            </span>
+        </span>
+    </dialog>
+    <dialog id="dialogDeleteInternData">
+        <span class="dialogMessage">
+            <p class="txt-bld">Are you sure you want to delete this intern?</p>
+            <span class="buttons">
+                <button id="cancelDeleteInternData" class="btn txt-bld">Cancel</button>
+                <button id="confirmDeleteInternData" class="btn txt-bld btn-cfm">Confirm</button>
+            </span>
+        </span>
+    </dialog>
+    <footer>
+        <p class="txt-s">Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script> Internship Management Studio by Radoy Zhelyazkov
+        </p>
+    </footer>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/table-sorting.js"></script>
+</body>
+</html>
