@@ -1,5 +1,3 @@
-import * as validators from './validators.js';
-
 const internsData = JSON.parse(localStorage.getItem('interns'));
 
 var list = document.getElementById('internList');
@@ -102,13 +100,13 @@ function listInterns(){
         endDate.appendChild(document.createTextNode(internsData[i].endDate));
 
         var daysLeft = tableRow.insertCell(); 
-        var daysLeftValue = validators.daysLeft(internsData[i].endDate);
+        var daysLeftValue = validatorDaysLeft(internsData[i].endDate);
 
         if(daysLeftValue <= 10){
             daysLeft.classList.add('dng', 'txt-bld');
         }    
 
-        daysLeft.appendChild(document.createTextNode(daysLeftValue + ' (' + validators.daysLeftPercentage(internsData[i].startDate, internsData[i].endDate) + '%)'));
+        daysLeft.appendChild(document.createTextNode(daysLeftValue + ' (' + validatorDaysLeftPercentage(internsData[i].startDate, internsData[i].endDate) + '%)'));
 
         var firstTask = tableRow.insertCell(); 
         firstTask.appendChild(document.createTextNode(internsData[i].firstTask));
@@ -204,5 +202,55 @@ function onInit () {
 
 onInit();
 
+function validatorIsLetterInput(event) {
+    if (!/['a-zA-z]/i.test(event.key) & event.key != 'Backspace' & event.key != ' '){
+        return event.returnValue = false;
+    }
+};
+
+function validatorIsNumericInput(event) {
+    if (!/['+0-9]/i.test(event.key) & event.key != 'Backspace' & event.key != 'Delete' & event.key != 'ArrowLeft' & event.key != 'ArrowRight' & event.key != 'Tab'){
+       return event.returnValue = false;
+    }
+};
+
+function validatorDaysLeft(endDate) {
+    let daysLeft = 0;
+
+    if(endDate != '') {
+        var currentDate = new Date();
+        var inputEndDate = new Date(endDate);
+
+        let difference = inputEndDate.getTime() - currentDate.getTime();
+        daysLeft = Math.ceil(difference / (1000 * 3600 * 24));
+    }
+
+    if(daysLeft < 0){
+        daysLeft = 0;
+    }
+
+    return daysLeft;
+}
+
+function validatorDaysLeftPercentage (startDate, endDate) {
+    let daysLeftPercentage = '';
+
+    if(startDate != '' && endDate != '') {
+        var inputStartDate = new Date(startDate);
+        var inputEndDate = new Date(endDate);
+        
+        let differenceTotal = inputEndDate.getTime() - inputStartDate.getTime();
+        var daysTotal = Math.ceil(differenceTotal / (1000 * 3600 * 24));
+        if(daysTotal == 0) {
+           daysTotal = 1;
+        }
+        
+        var daysLeftNumber = validatorDaysLeft(endDate);
+
+        daysLeftPercentage = (((daysLeftNumber/(daysTotal))) * 100).toFixed(2);
+    }
+
+    return daysLeftPercentage;
+}
 
 

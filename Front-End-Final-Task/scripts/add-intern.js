@@ -1,16 +1,14 @@
-import * as validators from './validators.js';
-
 const form = document.querySelector('form');
 form.addEventListener('submit', submitForm);
 
 var firstName = document.getElementById('firstName');
-firstName.addEventListener('keydown', validators.isLetterInput);
+firstName.addEventListener('keydown', validatorIsLetterInput);
 
 var lastName = document.getElementById('lastName');
-lastName.addEventListener('keydown', validators.isLetterInput);
+lastName.addEventListener('keydown', validatorIsLetterInput);
 
 var phone = document.getElementById('phone');
-phone.addEventListener('keydown', validators.isNumericInput);
+phone.addEventListener('keydown', validatorIsNumericInput);
 
 var email = document.getElementById('email');
 
@@ -35,10 +33,10 @@ var secondTaskResult = document.getElementById('secondTaskResult');
 secondTaskResult.addEventListener('change', internAssessment)
 
 var mentorFirstName = document.getElementById('mentorFirstName');
-mentorFirstName.addEventListener('keydown', validators.isLetterInput);
+mentorFirstName.addEventListener('keydown', validatorIsLetterInput);
 
 var mentorLastName = document.getElementById('mentorLastName');
-mentorLastName.addEventListener('keydown', validators.isLetterInput);
+mentorLastName.addEventListener('keydown', validatorIsLetterInput);
 
 var department = document.getElementById('department');
 department.addEventListener('change', departmentChange)
@@ -52,8 +50,8 @@ buttonBack.addEventListener("click", () => {
 });  
 
 function daysLeftNumber() {
-    var daysLeftNumber = validators.daysLeft(endDate.value);
-    var daysLeftPercentage = validators.daysLeftPercentage(startDate.value, endDate.value);
+    var daysLeftNumber = validatorDaysLeft(endDate.value);
+    var daysLeftPercentage = validatorDaysLeftPercentage(startDate.value, endDate.value);
 
     if(daysLeftNumber <=10){
         daysLeft.classList.add('dng');
@@ -257,4 +255,53 @@ function onInit () {
 
 onInit();
 
+function validatorIsLetterInput(event) {
+    if (!/['a-zA-z]/i.test(event.key) & event.key != 'Backspace' & event.key != ' '){
+        return event.returnValue = false;
+    }
+};
 
+function validatorIsNumericInput(event) {
+    if (!/['+0-9]/i.test(event.key) & event.key != 'Backspace' & event.key != 'Delete' & event.key != 'ArrowLeft' & event.key != 'ArrowRight' & event.key != 'Tab'){
+       return event.returnValue = false;
+    }
+};
+
+function validatorDaysLeft(endDate) {
+    let daysLeft = 0;
+
+    if(endDate != '') {
+        var currentDate = new Date();
+        var inputEndDate = new Date(endDate);
+
+        let difference = inputEndDate.getTime() - currentDate.getTime();
+        daysLeft = Math.ceil(difference / (1000 * 3600 * 24));
+    }
+
+    if(daysLeft < 0){
+        daysLeft = 0;
+    }
+
+    return daysLeft;
+}
+
+function validatorDaysLeftPercentage (startDate, endDate) {
+    let daysLeftPercentage = '';
+
+    if(startDate != '' && endDate != '') {
+        var inputStartDate = new Date(startDate);
+        var inputEndDate = new Date(endDate);
+        
+        let differenceTotal = inputEndDate.getTime() - inputStartDate.getTime();
+        var daysTotal = Math.ceil(differenceTotal / (1000 * 3600 * 24));
+        if(daysTotal == 0) {
+           daysTotal = 1;
+        }
+        
+        var daysLeftNumber = daysLeft(endDate);
+
+        daysLeftPercentage = (((daysLeftNumber/(daysTotal))) * 100).toFixed(2);
+    }
+
+    return daysLeftPercentage;
+}
